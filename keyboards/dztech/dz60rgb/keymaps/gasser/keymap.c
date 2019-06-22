@@ -35,9 +35,11 @@ void rgb_matrix_indicators_user(void) {
 	if (!g_suspend_state) {
 	    switch (biton32(layer_state)) {
 	      case _LAYER1:
-		    rgb_matrix_layer_helper(0xFF, 0x00, 0x00, false); break;
+            rgb_matrix_set_color(12, 0xFF, 0xFF, 0xFF); break;
+		    //rgb_matrix_layer_helper(0xFF, 0x00, 0x00, false); break;
 	      case _LAYER2:
-	        rgb_matrix_layer_helper(0x00, 0xFF, 0x00, false); break;
+            rgb_matrix_set_color(11, 0xFF, 0xFF, 0xFF); break;
+	        //rgb_matrix_layer_helper(0x00, 0xFF, 0x00, false); break;
         }
     }
 	if ( this_led & (1<<USB_LED_CAPS_LOCK)) {
