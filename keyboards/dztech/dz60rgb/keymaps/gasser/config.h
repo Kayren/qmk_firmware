@@ -5,12 +5,12 @@
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 
 // disable RGB_MATRIX_KEYPRESS effects
-#if define(RGB_MATRIX_KEYPRESSES)
+#if defined (RGB_MATRIX_KEYPRESSES)
     #undef RGB_MATRIX_KEYPRESSES
 #endif
 
 // disable RGB_MATRIX_KEYRELEASES effects
-#if define(RGB_MATRIX_KEYRELEASES)
+#if defined (RGB_MATRIX_KEYRELEASES)
     #undef RGB_MATRIX_KEYRELEASES
 #endif
 
