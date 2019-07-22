@@ -1,8 +1,13 @@
 #pragma once
 #define dzrgb60_ansi
 
+// force NKRO
+#define FORCE_NKRO
+
 // enable framebuffer effects
-#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#if defined (RGB_MATRIX_FRAMEBUFFER_EFFECTS)
+    #undef RGB_MATRIX_FRAMEBUFFER_EFFEECTS
+#endif
 
 // disable RGB_MATRIX_KEYPRESS effects
 #if defined (RGB_MATRIX_KEYPRESSES)
@@ -15,6 +20,7 @@
 #endif
 
 // disable all other RGB effects
+#define DISABLE_RGB_MATRIX_NONE
 #define DISABLE_RGB_MATRIX_SOLID_COLOR
 #define DISABLE_RGB_MATRIX_ALPHAS_MODS
 #define DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
